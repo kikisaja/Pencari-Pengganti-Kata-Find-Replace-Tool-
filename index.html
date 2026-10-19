@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find & Replace Tool 🔍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Saran No. 113</span>
+            <h1>🔍 FIND & REPLACE TOOL</h1>
+            <p>Cari dan ganti kata dalam paragraf teks secara masal!</p>
+        </header>
+
+        <!-- Input Paragraf Sumber -->
+        <div class="input-section">
+            <label for="source-text">Paragraf / Teks Asli:</label>
+            <textarea id="source-text" placeholder="Ketik atau tempel teks kamu di sini..."></textarea>
+        </div>
+
+        <!-- Panel Kontrol Find & Replace -->
+        <div class="control-panel">
+            <div class="control-group">
+                <label for="find-input">Cari Kata:</label>
+                <input type="text" id="find-input" placeholder="Kata yang dicari...">
+            </div>
+
+            <div class="control-group">
+                <label for="replace-input">Ganti Dengan:</label>
+                <input type="text" id="replace-input" placeholder="Kata pengganti...">
+            </div>
+
+            <!-- Opsi Tambahan -->
+            <div class="options-row">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="case-sensitive">
+                    <span>Sensitif Huruf Besar/Kecil (Case Sensitive)</span>
+                </label>
+                <span id="match-counter" class="match-counter">Ditemukan: 0 kata</span>
+            </div>
+
+            <div class="btn-row">
+                <button type="button" id="btn-replace" class="btn-action replace">✨ Ganti Semua (Replace All)</button>
+                <button type="button" id="btn-clear" class="btn-action clear">🗑️ Bersihkan</button>
+            </div>
+        </div>
+
+        <!-- Output Hasil Teks -->
+        <div class="output-section">
+            <div class="output-header">
+                <span>Hasil Teks Akhir:</span>
+                <button type="button" id="copy-btn" class="btn-copy">📋 Salin Teks</button>
+            </div>
+            <div class="output-box" id="output-box">
+                <span class="placeholder-text">Hasil teks akan muncul di sini...</span>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast hidden">Teks berhasil disalin! 🚀</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
